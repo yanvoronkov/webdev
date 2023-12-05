@@ -1,6 +1,41 @@
+@font-face {
+	font-family: 'Gilroy Bold';
+	font-weight: normal;
+	font-style: normal;
+	/* Браузер сначала попробует найти шрифт локально */
+	src: local("Gilroy Bold"),
+		/* Если не получилось, загрузит woff2 */
+		url("fonts/Gilroy-Bold.woff") format("woff"),
+}
+
+@font-face {
+	font-family: "Gilroy Semibold";
+	font-weight: normal;
+	font-style: normal;
+	/* Браузер сначала попробует найти шрифт локально */
+	src: local("Gilroy Semibold"),
+		/* Если не получилось, загрузит woff2 */
+		url("fonts/Gilroy-SemiBold.woff") format("woff"),
+}
+
+@font-face {
+	font-family: 'Gilroy Medium';
+	font-weight: normal;
+	font-style: normal;
+	/* Браузер сначала попробует найти шрифт локально */
+	src: local("Gilroy-Medium"),
+		/* Если не получилось, загрузит woff2 */
+		url("fonts/Gilroy-Medium.woff") format("woff"),
+}
+
 * {
 	margin: 0;
 	padding: 0;
+	text-decoration: none;
+}
+
+.top {
+	padding: 0 calc(50% - 585px);
 }
 
 .top__content {
@@ -8,19 +43,88 @@
 }
 
 .header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	margin-top: 40px;
 	margin-bottom: 84px;
 }
 
+.header__logo {
+	display: flex;
+	gap: 14px;
+}
+
+.header__nav {
+	display: flex;
+	gap: 36px;
+}
+
+a {
+	font-family: 'Gilroy Medium';
+	color: #000;
+	font-size: 14px;
+	font-weight: 400;
+}
+
+.top__content {
+	display: flex;
+	gap: 41px;
+}
+
 .title {
+	font-family: 'Gilroy Bold';
 	margin-bottom: 17px;
+	color: #000;
+	font-size: 60px;
+	font-weight: 400;
 }
 
 .subtitle {
 	margin-bottom: 37px;
+	font-family: 'Gilroy Medium';
+	color: #888;
+	font-size: 20px;
+	font-weight: 400;
 }
 
 .top__logos {
 	padding-top: 97px;
 	padding-bottom: 96px;
+}
+
+.top__image {
+	min-width: 545px;
+	min-height: 375px;
+}
+
+.top_buttons {
+	display: flex;
+	gap: 72px;
+}
+
+.start {
+	width: 140px;
+	height: 50px;
+	flex-shrink: 0;
+	border-radius: 50px;
+	background: #F25822;
+	box-shadow: 4px 4px 8px 0px rgba(241, 197, 181, 0.2);
+	border: none;
+	color: #FFF;
+	font-family: 'Gilroy Bold';
+	font-size: 15px;
+	font-weight: 200;
+}
+
+.watch {
+	border: none;
+	outline: none;
+	background: none;
+	color: #AAA;
+	font-family: 'Gilroy Bold';
+	font-size: 15px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
 }
